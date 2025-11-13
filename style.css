@@ -1,0 +1,125 @@
+body {
+    cursor: url("assets/imgs/cursor.png"), auto !important;
+    background-image: url("assets/imgs/bg.png");
+    background-size: 1920px;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: "BlitzMain", serif;
+}
+
+@font-face {
+  font-family: 'BlitzMain';
+  src: url('assets/fonts/BlitzMain.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BlitzBold';
+  src: url('assets/fonts/BlitzBold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+    cursor: url("assets/imgs/cursor.png"), auto !important;
+}
+
+a:link {
+    display: inline-block; 
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+li {
+  margin-bottom: 10px; /* Adds 10 pixels of space below each list item */
+}
+
+#mainn {
+    padding-right: 250px;
+    padding-left: 250px;
+    position: relative;
+    z-index: 200;
+}
+
+#topOrder {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#topOrder2 {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#order {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.title {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "BlitzBold", serif;
+}
+
+.columnTop {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(0, 0, 0, 0.60);
+    border-radius: 10px;
+    width: 1350px;
+}
+
+.columnMiddle {
+    display: block;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(0, 0, 0, 0.60);
+    border-radius: 10px;
+    height: 673px;
+    width: 765px;
+}
+
+.pageList {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    /* border: 1px solid #000000; */
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "BlitzMain", serif;
+    display: inline-block; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.list-pages {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content:center;
+    gap: 30px;
+}
+
+ul.list-pages li:nth-child(1) .pageList {
+    background-color: #236cc1;
+    transform: scale(1.1) rotate(1.5deg);
+}
