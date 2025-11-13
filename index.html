@@ -7,25 +7,84 @@
     <link type="text/css" rel="stylesheet" href="Style.css"/>
   </head>
 
-  <body>
+  <body onload="calculateSpecificAge()">
     <main id="mainn">
       <div id="topOrder">
-        <img src="assets/imgs/banner.png" style="height: 143px; border-radius: 10px; display: block; margin: auto">
+        <img src="assets/imgs/banner.png" style="height: 137px; border-radius: 10px; display: block; margin: auto">
       </div>
       <div id="topOrder2">
         <div class="columnTop" style="height: 50px;">
-          <div style="font-size: 20px">
+          <div style="padding-top: 4px; font-size: 20px">
               <ul class="list-pages">
+                <li><a onClick="wipWarning()" class="pageList">Portifólio</a></li>
                 <li><div class="pageList">Home</div></li>
+                <li><a onClick="wipWarning()" class="pageList">Artes</a></li>
               </ul>
           </div>
         </div>
       </div>
-        <div class="columnMiddle" style="font-size: 20px">
-          <div class="title" style="font-size: 50px"> CALMA AÍ!!!</div>
-            Tô fazendo o repositório ainda...
+      <div id="order">
+        <div class="sideOrder">
+          <div class="columnSide" style="height: 456px;">
+            <div class="title">Sobre mim:</div>
+            <img src="assets/imgs/pfp.png" style="width: 240px; border-radius: 15px">
+            <div style="text-align: center">Andrei Pimenta<br>
+              ele/dele ♂<br>
+              12/09/2005 (<span id="ageResult"></span>)<br>
+              Não sou uma fangirl.<br>
+              Rio de Janeiro, Brasil 🇧🇷
+            </div>
+          </div>
+          <div class="columnSide" style="height: 321px;">
+            <!-- <div class="title">SplatStats:</div> -->
+            <img src="assets/imgs/splashtag.png" style="width: 255px">
+            <div style="font-size: 25px">Mains:</div>
+              <ul class="weapon-list">
+                <li><img src="assets/imgs/weapon/Stamper.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/Wiper.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/N-ZAP_85.png" style="width: 50px"></li>
+              </ul>
+            <div style="font-size: 25px">Quero Aprender:</div>
+              <ul class="weapon-list">
+                <li><img src="assets/imgs/weapon/ZF_Splat_Charger.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/New_Squiffer.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/Mint_Decavitator.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/52_Gal.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/Slosher.png" style="width: 50px"></li>
+              </ul>
+          </div>
         </div>
+
+        <div class="columnMiddle" style="font-size: 20px">
+          <div class="title" style="font-size: 50px"> OLÁ!!! <img src="assets/imgs/emoji/hello-smiley.gif" style="width: 80px"></div>
+          Não sei exatamente o que escrever aqui, então vou falar um pouco sobre mim mesmo! <img src="assets/imgs/emoji/hihihi.png" style="width: 28px"><br>
+          Sou um pequeno criador de conteúdo brasileiro de Splatoon e jogador competitivo novato. Comecei a jogar em 14/05/2024 e logo me apaixonei pelo jogo!<br>
+          Produzo vídeos para a internet desde 2018, mas tive público de verdade pela primeira vez em 2025 graças a Splatoon.
+        </div>
+
+        <div class="sideOrder">
+          <div class="columnSide" style="height: 268px;">
+            <div class="title">Socials:</div>
+            <div class=socialGrid>
+              <a href="https://www.youtube.com/channel/UCAbjQFqcIqxR8lZDTKNepMQ" class="socialList"><img src="assets/imgs/icons/youtube.png" style="margin-bottom: -3px; width: 17px"> YouTube</a>
+              <a href="https://www.tiktok.com/@andrei_p127" class="socialList"><img src="assets/imgs/icons/tiktok.png" style="margin-bottom: -3px; width: 17px"> TikTok</a>
+              <a href="https://www.instagram.com/sat.suki127" class="socialList"><img src="assets/imgs/icons/instagram.png" style="margin-bottom: -3px; width: 17px"> Instagram</a>
+              <a href="https://steamcommunity.com/id/Andrei_P127" class="socialList"><img src="assets/imgs/icons/steam.png" style="margin-bottom: -3px; width: 17px"> Steam</a>
+              <a href="https://www.sendou.ink/u/andrei_p127" class="socialList"><img src="assets/imgs/icons/sendouink.png" style="margin-bottom: -4px; width: 14px"> Sendou.ink</a>
+              <a onClick="wipWarning()" class="socialList"><img src="assets/imgs/icons/discord.png" style="margin-bottom: -3px; width: 17px"> Discord</a>
+            </div>
+          </div>
+          <div class="columnSide" style="height: 397px;">
+            <div class="title">Me apoie:</div>
+            <a href="https://livepix.gg/andreip127"> <img class="qrcode" src="assets/imgs/livepix.png" style="width: 240px"> </a>
+            <div style="font-size: 10px; text-align: right; padding-right: 17px;">Preciso dar alimento à Suki...</div>
+          </div>
+        </div>
+      </div>
       <br>
     </main>
+    (WIP)
+    
+    <script src="script.js"></script>
   </body>
 </html>

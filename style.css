@@ -44,6 +44,28 @@ li {
   margin-bottom: 10px; /* Adds 10 pixels of space below each list item */
 }
 
+.watermark {
+    transition: transform 0.2s ease-in-out; 
+}
+
+.watermark:hover {
+    transform: scale(1.05)
+}
+
+.qrcode {
+    transition: transform 0.2s ease-in-out; 
+}
+
+.qrcode:hover {
+    transform: scale(1.025)
+}
+
+.imageflex { 
+    display: flex; 
+    margin-left: 5px; margin-top: 0;
+    float: right;
+}
+
 #mainn {
     padding-right: 250px;
     padding-left: 250px;
@@ -68,6 +90,12 @@ li {
     flex-direction: row;
     margin: 0 auto;
 }
+
+.socialGrid {
+    display: grid;
+    gap: 5px;
+}
+
 .title {
     font-size: 25px;
     color: rgb(255, 255, 255);
@@ -97,6 +125,92 @@ li {
     width: 765px;
 }
 
+.columnSide {
+    padding: 12px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 271px;
+    height: 438px;
+    order: inherit;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+.weapon-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+/* ul.weapon-list li {
+    transition: transform 0.2s ease-in-out; 
+}
+
+ul.weapon-list li:hover {
+    transform: scale(1.1);
+} */
+
+.list-pages {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content:center;
+    gap: 30px;
+}
+
+.list-pages li:not(:last-child)::after {
+    content: "|"; /* The separator character */
+    position:relative;
+    right: -15px; /* Adjust position relative to the list item */
+}
+
+.socialList {
+    text-align: left;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* border: 1px solid #000000; */
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "BlitzMain", serif;
+    display: inline-block; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.socialList:nth-of-type(1):hover {
+    background-color: #fe002f;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
+.socialList:nth-of-type(2):hover {
+    background-color: #2d196f;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
+.socialList:nth-of-type(3):hover {
+    background-color: #fb096c;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
+.socialList:nth-of-type(4):hover {
+    background-color: #00395e;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
+.socialList:nth-of-type(5):hover {
+    background-color: #5dac45;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
+.socialList:nth-of-type(6):hover {
+    background-color: #5865f2;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
 .pageList {
     text-align: center;
     padding-left: 10px;
@@ -110,16 +224,18 @@ li {
     transition: transform 0.2s ease-in-out; 
 }
 
-.list-pages {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content:center;
-    gap: 30px;
+ul.list-pages li:nth-child(1):hover .pageList {
+    background-color: #236cc1;
+    transform: scale(1.1) rotate(1.5deg);
 }
 
-ul.list-pages li:nth-child(1) .pageList {
-    background-color: #236cc1;
+ul.list-pages li:nth-child(2) .pageList {
+    background-color: #239855;
+    transform: scale(1.1) rotate(1.5deg);
+}
+
+ul.list-pages li:nth-child(3):hover .pageList {
+    /*background-color: #ec1f4e;*/
+    background-color: #ff446f;
     transform: scale(1.1) rotate(1.5deg);
 }
