@@ -3,6 +3,7 @@
   <head>
     <title>Drey's home</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/imgs/favicon.png" type="image/png">
     <link type="text/css" rel="stylesheet" href="style.css"/>
   </head>
@@ -10,7 +11,7 @@
   <body onload="calculateSpecificAge()">
     <main id="mainn">
       <div id="topOrder">
-        <img src="assets/imgs/banner.png" style="height: 137px; border-radius: 10px; display: block; margin: auto">
+        <img src="assets/imgs/banner.png" class="banner">
       </div>
       <div id="topOrder2">
         <div class="columnTop" style="height: 50px;">
@@ -25,9 +26,9 @@
       </div>
       <div id="order">
         <div class="sideOrder">
-          <div class="columnSide" style="height: 456px;">
+          <div class="columnSide">
             <div class="title">Sobre mim:</div>
-            <img src="assets/imgs/pfp.png" style="width: 240px; border-radius: 15px">
+            <img src="assets/imgs/pfp.png" class="pfp">
             <div style="text-align: center">Andrei Pimenta<br>
               ele/dele ♂<br>
               12/09/2005 (<span id="ageResult"></span>)<br>
@@ -35,48 +36,50 @@
               Rio de Janeiro, Brasil 🇧🇷
             </div>
           </div>
-          <div class="columnSide" style="height: 321px;">
+          <div class="columnSide">
             <!-- <div class="title">SplatStats:</div> -->
-            <img src="assets/imgs/splashtag.png" style="width: 255px">
+            <img src="assets/imgs/splashtag.png" class="splashtag">
             <div style="font-size: 25px">Mains:</div>
               <ul class="weapon-list">
-                <li><img src="assets/imgs/weapon/Stamper.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/Wiper.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/N-ZAP_85.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/Stamper.png" class="weapon-icon"></li>
+                <li><img src="assets/imgs/weapon/Wiper.png" class="weapon-icon"></li>
+                <li><img src="assets/imgs/weapon/N-ZAP_85.png" class="weapon-icon"></li>
               </ul>
             <div style="font-size: 25px">Quero Aprender:</div>
               <ul class="weapon-list">
-                <li><img src="assets/imgs/weapon/ZF_Splat_Charger.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/New_Squiffer.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/Mint_Decavitator.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/52_Gal.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/Slosher.png" style="width: 50px"></li>
+                <li><img src="assets/imgs/weapon/ZF_Splat_Charger.png" class="weapon-icon"></li>
+                <li><img src="assets/imgs/weapon/New_Squiffer.png" class="weapon-icon"></li>
+                <li><img src="assets/imgs/weapon/Mint_Decavitator.png" class="weapon-icon"><br class="mobile-line-break"></li>
+                <li><img src="assets/imgs/weapon/52_Gal.png" class="weapon-icon"></li>
+                <li><img src="assets/imgs/weapon/Slosher.png" class="weapon-icon"></li>
               </ul>
           </div>
         </div>
 
-        <div class="columnMiddle" style="font-size: 20px">
-          <div class="title" style="font-size: 50px"> OLÁ!!! <img src="assets/imgs/emoji/hello-smiley.gif" style="width: 80px"></div>
-          Não sei exatamente o que escrever aqui, então vou falar um pouco sobre mim mesmo! <img src="assets/imgs/emoji/hihihi.png" style="width: 28px"><br>
-          Sou um pequeno criador de conteúdo brasileiro de Splatoon e jogador competitivo novato. Comecei a jogar em 14/05/2024 e logo me apaixonei pelo jogo!<br>
-          Produzo vídeos para a internet desde 2018, mas tive público de verdade pela primeira vez em 2025 graças a Splatoon.
+        <div>
+          <div class="columnMiddle" style="font-size: 20px">
+            <div class="title" style="font-size: 50px"> OLÁ!!! <img src="assets/imgs/emoji/hello-smiley.gif" style="width: 80px"></div>
+            Não sei exatamente o que escrever aqui, então vou falar um pouco sobre mim mesmo! <img src="assets/imgs/emoji/hihihi.png" style="width: 28px"><br>
+            Sou um pequeno criador de conteúdo brasileiro de Splatoon e jogador competitivo novato. Comecei a jogar em 14/05/2024 e logo me apaixonei pelo jogo!<br>
+            Produzo vídeos para a internet desde 2018, mas tive público de verdade pela primeira vez em 2025 graças a Splatoon.
+          </div>
         </div>
 
         <div class="sideOrder">
-          <div class="columnSide" style="height: 268px;">
+          <div class="columnSide">
             <div class="title">Socials:</div>
             <div class=socialGrid>
               <a href="https://www.youtube.com/channel/UCAbjQFqcIqxR8lZDTKNepMQ" class="socialList"><img src="assets/imgs/icons/youtube.png" style="margin-bottom: -3px; width: 17px"> YouTube</a>
               <a href="https://www.tiktok.com/@andrei_p127" class="socialList"><img src="assets/imgs/icons/tiktok.png" style="margin-bottom: -3px; width: 17px"> TikTok</a>
-              <a href="https://www.instagram.com/sat.suki127" class="socialList"><img src="assets/imgs/icons/instagram.png" style="margin-bottom: -3px; width: 17px"> Instagram</a>
+              <a href="https://www.instagram.com/sat.suki127" class="socialList"><img src="assets/imgs/icons/instagram.png" style="margin-bottom: -3px; width: 17px"> Instagram (Suki)</a>
               <a href="https://steamcommunity.com/id/Andrei_P127" class="socialList"><img src="assets/imgs/icons/steam.png" style="margin-bottom: -3px; width: 17px"> Steam</a>
               <a href="https://www.sendou.ink/u/andrei_p127" class="socialList"><img src="assets/imgs/icons/sendouink.png" style="margin-bottom: -4px; width: 14px"> Sendou.ink</a>
               <a onClick="wipWarning()" class="socialList"><img src="assets/imgs/icons/discord.png" style="margin-bottom: -3px; width: 17px"> Discord</a>
             </div>
           </div>
-          <div class="columnSide" style="height: 397px;">
+          <div class="columnSide">
             <div class="title">Me apoie:</div>
-            <a href="https://livepix.gg/andreip127"> <img class="qrcode" src="assets/imgs/livepix.png" style="width: 240px"> </a>
+            <a href="https://livepix.gg/andreip127"> <img class="qrcode" src="assets/imgs/livepix.png"> </a>
             <div style="font-size: 10px; text-align: right; padding-right: 17px;">Preciso dar alimento à Suki...</div>
           </div>
         </div>
@@ -87,7 +90,4 @@
     
     <script src="script.js"></script>
   </body>
-
 </html>
-
-
