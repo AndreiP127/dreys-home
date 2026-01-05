@@ -1,7 +1,7 @@
 body {
     cursor: url("assets/imgs/cursor.png"), auto !important;
     background-image: url("assets/imgs/bg.png");
-    background-size: 1920px;
+    background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
     font-family: "BlitzMain", serif;
@@ -53,8 +53,7 @@ li {
 }
 
 .qrcode {
-    transition: transform 0.2s ease-in-out;
-    width: 240px
+    transition: transform 0.2s ease-in-out; 
 }
 
 .qrcode:hover {
@@ -67,6 +66,12 @@ li {
     float: right;
 }
 
+#mainn {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #topOrder {
     display: flex;
     flex-direction: row;
@@ -77,13 +82,12 @@ li {
     display: flex;
     flex-direction: row;
     margin: 10px;
-    width: auto;
 }
 
 #order {
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .socialGrid {
@@ -106,16 +110,18 @@ li {
     padding-right: 12px;
     background-color: rgba(0, 0, 0, 0.60);
     border-radius: 10px;
-    width: 2350px;
+    width: 100%;
 }
 
 .columnMiddle {
     display: block;
-    margin: 0 auto;
+    margin: 0 0;
     padding-left: 12px;
     padding-right: 12px;
     background-color: rgba(0, 0, 0, 0.60);
     border-radius: 10px;
+    height: auto;
+    width: 100%;
 }
 
 .columnSide {
@@ -124,7 +130,7 @@ li {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    width: 270px;
+    width: 85%;
     height: auto;
     order: inherit;
     border-radius: 10px;
@@ -137,11 +143,6 @@ li {
     padding: 0;
     margin: 0;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.weapon-icon {
-    width: 50px;
 }
 
 /* ul.weapon-list li {
@@ -157,7 +158,7 @@ ul.weapon-list li:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: center;
+    justify-content:center;
     gap: 30px;
 }
 
@@ -238,109 +239,10 @@ ul.list-pages li:nth-child(3):hover .pageList {
     transform: scale(1.1) rotate(1.5deg);
 }
 
-.pfp {
-    width: 240px;
-    border-radius: 15px
-}
-
-.splashtag {
-    width: 255px
-}
-
-.banner {
-    height: auto;
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    margin: auto
-}
-
-@media only screen and (min-width: 500px) and (min-height: 500px) {/*PC*/
+@media screen and (orientation: portrait) {
     #mainn {
-        padding-right: 17%;
-        padding-left: 17%;
-        position: relative;
-        z-index: 200;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
-    #topOrder2 {
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-        width: auto;
-    }
-    #topOrder {
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-    }
-}
-
-@media only screen and (max-height: 500px) { /*Celular Horizontal*/
-    body {
-        scale: 0.8;
-        transform-origin: top center; 
-    }
-    #mainn {
-        position: relative;
-        z-index: 200;
-    }
-    #topOrder {
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-    }
-    .columnSide {
-        width: 160px;
-    }
-    .pfp {
-        height: 160px;
-        width: 160px;
-    }
-    .splashtag {
-        width: 160px;
-        width: 160px;
-    }
-    .qrcode {
-        width: 160px;
-        width: 160px;
-    }
-}
-
-@media only screen and (max-width: 500px) { /*Celular Vertical*/
-    #mainn {
-        position: relative;
-        z-index: 200;
-    }
-    .banner {
-        height: auto;
-        width: 500px;
-        border-radius: 10px;
-        display: block;
-        margin: auto
-    }
-    .columnSide {
-        width: 120px;
-    }
-    .pfp {
-        height: 120px;
-        width: 120px;
-    }
-    .splashtag {
-        width: 120px;
-        width: 120px;
-    }
-    .qrcode {
-        width: 120px;
-        width: 120px;
-    }
-    .weapon-icon {
-        width: 30px;
-    }
-    #topOrder2 {
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-        width: 127%;
-    }
-
 }
