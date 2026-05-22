@@ -1,28 +1,27 @@
 body {
-    cursor: url("assets/imgs/cursor.png"), auto !important;
-    background-image: url("assets/imgs/bg.png");
+    background-image: url("assets/imgs/bg.webp");
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
-    font-family: "BlitzMain", serif;
+    font-family: "Splatfont2", serif;
+}
+
+.tab-content {
+    display: none;
 }
 
 @font-face {
-  font-family: 'BlitzMain';
-  src: url('assets/fonts/BlitzMain.otf');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Splatfont2';
+    src: url('assets/fonts/Splatfont2.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'BlitzBold';
-  src: url('assets/fonts/BlitzBold.otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-a {
-    cursor: url("assets/imgs/cursor.png"), auto !important;
+    font-family: 'Splatfont';
+    src: url('assets/fonts/Splatfont.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 a:link {
@@ -41,29 +40,16 @@ a:hover {
 }
 
 li {
-  margin-bottom: 10px; /* Adds 10 pixels of space below each list item */
-}
-
-.watermark {
-    transition: transform 0.2s ease-in-out; 
-}
-
-.watermark:hover {
-    transform: scale(1.05)
+    margin-bottom: 10px;
 }
 
 .qrcode {
     transition: transform 0.2s ease-in-out; 
+    width: 100%
 }
 
 .qrcode:hover {
     transform: scale(1.025)
-}
-
-.imageflex { 
-    display: flex; 
-    margin-left: 5px; margin-top: 0;
-    float: right;
 }
 
 #mainn {
@@ -75,31 +61,41 @@ li {
 #topOrder {
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 #topOrder2 {
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
-#order {
+#homeOrder {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+#aboutOrder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sideOrder {
+    width: 115%;
+}
+
 .socialGrid {
     display: grid;
-    gap: 5px;
+    gap: 2%;
 }
 
 .title {
-    font-size: 25px;
+    font-size: 175%;
     color: rgb(255, 255, 255);
     text-align: center;
-    font-family: "BlitzBold", serif;
+    font-family: "Splatfont", serif;
 }
 
 .columnTop {
@@ -113,13 +109,23 @@ li {
     width: 100%;
 }
 
+.columnCharacter {
+    padding: 2%;
+    margin-left: -1%;
+    margin-right: -1%;
+    margin-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.60);
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+}
+
 .columnMiddle {
-    padding: 12px;
-    display: block;
-    margin: 0 0;
-    margin-bottom: 10px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 2%;
+    padding-top: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
     background-color: rgba(0, 0, 0, 0.60);
     border-radius: 10px;
     height: auto;
@@ -127,16 +133,39 @@ li {
 }
 
 .columnSide {
-    padding: 12px;
+    padding: 8%;
+    display: block;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: 10px;
-    width: 85%;
+    width: 83%;
     height: auto;
     order: inherit;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.60);
+}
+
+
+.characterGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+    margin-bottom: 1%;
+}
+
+.characterBlock {
+    text-align: left;
+    width: 36%;
+    height: 10%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid #000000;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "Splatfont2", serif;
+    display: inline-block; 
+    transition: transform 0.2s ease-in-out; 
+    line-height: 30px;
 }
 
 .weapon-list {
@@ -146,14 +175,6 @@ li {
     margin: 0;
     justify-content: space-around;
 }
-
-/* ul.weapon-list li {
-    transition: transform 0.2s ease-in-out; 
-}
-
-ul.weapon-list li:hover {
-    transform: scale(1.1);
-} */
 
 .list-pages {
     display: flex;
@@ -165,9 +186,9 @@ ul.weapon-list li:hover {
 }
 
 .list-pages li:not(:last-child)::after {
-    content: "|"; /* The separator character */
+    content: "|";
     position:relative;
-    right: -15px; /* Adjust position relative to the list item */
+    right: -15px;
 }
 
 .consoleList {
@@ -179,17 +200,16 @@ ul.weapon-list li:hover {
     width: 23%;
     height: fit-content;
     border-radius: 15px;
-    margin: 1%;
+    margin: 8px;
 }
 
 .socialList {
     text-align: left;
     padding-left: 10px;
     background-color: rgba(0, 0, 0, 0.6);
-    /* border: 1px solid #000000; */
     border-radius: 10px;
     color: rgb(255, 255, 255);
-    font-family: "BlitzMain", serif;
+    font-family: "Splatfont2", serif;
     display: inline-block; 
     transition: transform 0.2s ease-in-out; 
 }
@@ -224,39 +244,63 @@ ul.weapon-list li:hover {
     transform: scale(1.1) rotate(1.5deg);
 }
 
+.socialList:hover {
+    cursor: pointer;
+}
+
 .pageList {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     background-color: rgba(0, 0, 0, 0);
-    /* border: 1px solid #000000; */
     border-radius: 10px;
     color: rgb(255, 255, 255);
-    font-family: "BlitzMain", serif;
+    font-family: "Splatfont2", serif;
     display: inline-block; 
     transition: transform 0.2s ease-in-out; 
 }
 
+ul.list-pages li:hover .pageList {
+    cursor: pointer;
+}
+
 ul.list-pages li:nth-child(1):hover .pageList {
-    background-color: #236cc1;
+    background-color: #e2a633;
     transform: scale(1.1) rotate(1.5deg);
 }
 
-ul.list-pages li:nth-child(2) .pageList {
+ul.list-pages li:nth-child(2):hover .pageList {
     background-color: #239855;
     transform: scale(1.1) rotate(1.5deg);
 }
 
 ul.list-pages li:nth-child(3):hover .pageList {
-    /*background-color: #ec1f4e;*/
-    background-color: #ff446f;
+    background-color: #a941ea;
     transform: scale(1.1) rotate(1.5deg);
 }
 
-@media screen and (orientation: portrait) {
-#mainn {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+ul.list-pages li:nth-child(1).active .pageList {
+    background-color: #e2a633 !important;
+    transform: scale(1.1) rotate(1.5deg) !important;
+    cursor: default !important;
 }
+
+ul.list-pages li:nth-child(2).active .pageList {
+    background-color: #309451 !important;
+    transform: scale(1.1) rotate(1.5deg) !important;
+    cursor: default !important;
+}
+
+ul.list-pages li:nth-child(3).active .pageList {
+    background-color: #a941ea !important;
+    transform: scale(1.1) rotate(1.5deg) !important;
+    cursor: default !important;
+}
+
+@media screen and (orientation: portrait) {
+    #mainn {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

@@ -1,142 +1,253 @@
 <!DOCTYPE html>
 <html lang=¨pt-br¨>
   <head>
-    <title>Drey's home</title>
+    <title>Anne's home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.3">
-    <link rel="icon" href="assets/imgs/favicon.png" type="image/png">
+    <link rel="icon" href="assets/imgs/favicon.webp" type="image/webp">
     <link type="text/css" rel="stylesheet" href="style.css"/>
   </head>
 
-  <body onload="calculateSpecificAge()">
+  <body>
     <main id="mainn">
       <div id="topOrder">
-        <img src="assets/imgs/banner.png" style="border-radius: 10px; display: block; margin: auto; overflow: hidden">
+        <img src="assets/imgs/banner.webp" style="border-radius: 10px; display: block; margin: auto; overflow: hidden">
       </div>
       <div id="topOrder2">
-        <div class="columnTop" style="height: 50px; width:100%;">
+        <div class="columnTop" style="height: 50px; width: 100%;">
           <div style="padding-top: 4px; font-size: 20px">
               <ul class="list-pages">
-                <li><a onClick="wipWarning()" class="pageList">Portifólio</a></li>
-                <li><div class="pageList">Home</div></li>
-                <li><a onClick="wipWarning()" class="pageList">Artes</a></li>
+                <li><a onClick="changePage(this, 'sobreMim')" class="pageList">Sobre Mim</a></li>
+                <li><a onClick="changePage(this, 'home')" class="pageList">Home</a></li>
+                <li><a onClick="changePage(this, 'ocs')" class="pageList">OCs</a></li>
               </ul>
           </div>
         </div>
       </div>
-      <div id="order">
-        <div class="sideOrder">
-          <div class="columnSide">
-            <div class="title">Sobre mim:</div>
-            <img src="assets/imgs/pfp.png" style="width: 240px; border-radius: 15px">
-            <div style="text-align: center">Andrei Pimenta<br>
-              ele/dele ♂<br>
-              12/09/2005 (<span id="ageResult"></span>)<br>
-              Não sou uma fangirl.<br>
-              Rio de Janeiro, Brasil 🇧🇷
+      
+      <div id="sobreMim" class="toggleablePage" style="display: none;">
+        <div id="aboutOrder">
+          <div class="sideOrder">
+            <div class="columnSide">
+              <div class="title">Sobre Mim:</div>
+              <img src="assets/imgs/pfp.webp" style="width: 100%; border-radius: 15px">
+              <div style="text-align: center">Anne Pimenta<br>
+                ela/dela (preferência)<br>
+                Demigirl <img src="assets/imgs/emoji/demigirl_flag.webp" style="width: 20px"><br>
+                12/09/2005 (<span id="ageResult"></span>)<br>
+                Rio de Janeiro, Brasil 🇧🇷<br>
+                Cursando Design de Animação
+              </div>
+            </div>
+            <div class="columnSide">
+              <div class="title">Splatoon 3:</div>
+              <img src="assets/imgs/splashtag.webp" style="width: 100%; border-radius: 4px">
+              <div style="font-size: 25px">Mains:</div>
+                <ul class="weapon-list">
+                  <li><img src="assets/imgs/weapon/Stamper.webp" style="width: 40px"></li>
+                  <li><img src="assets/imgs/weapon/Wiper.webp" style="width: 40px"></li>
+                  <li><img src="assets/imgs/weapon/N-ZAP_85.webp" style="width: 40px"></li>
+                  <li><img src="assets/imgs/weapon/ZF_Splat_Charger.webp" style="width: 40px"></li>
+                  <li><img src="assets/imgs/weapon/52_Gal.webp" style="width: 40px"></li>
+                </ul>
+              <div style="font-size: 25px">Quero Aprender:</div>
+                <ul class="weapon-list">
+                  <li><img src="assets/imgs/weapon/New_Squiffer.webp" style="width: 50px"></li>
+                  <li><img src="assets/imgs/weapon/Mint_Decavitator.webp" style="width: 50px"></li>
+                  <li><img src="assets/imgs/weapon/Slosher.webp" style="width: 50px"></li>
+                </ul>
             </div>
           </div>
-          <div class="columnSide">
-            <div class="title">Splatoon 3:</div>
-            <img src="assets/imgs/splashtag.png" style="width: 255px; border-radius: 4px">
-            <div style="font-size: 25px">Mains:</div>
-              <ul class="weapon-list">
-                <li><img src="assets/imgs/weapon/Stamper.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/Wiper.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/N-ZAP_85.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/ZF_Splat_Charger.png" style="width: 50px"></li>
-              </ul>
-            <div style="font-size: 25px">Quero Aprender:</div>
-              <ul class="weapon-list">
-                <li><img src="assets/imgs/weapon/New_Squiffer.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/Mint_Decavitator.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/52_Gal.png" style="width: 50px"></li>
-                <li><img src="assets/imgs/weapon/Slosher.png" style="width: 50px"></li>
-              </ul>
-          </div>
-          <div class="columnSide">
-            <div class="title">Meus Consoles:</div>
-            <ul class="consoleList">
-              <li>Nintendo Wii</li>
-              <li>Nintendo Wii U</li>
-              <li>Nintendo DSi XL</li>
-              <li>Nintendo 3DS</li>
-              <li>Nintendo Switch OLED</li>
-              <li>Nintendo Switch 2</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="middleOrder">
-          <div class="columnMiddle" style="font-size: 20px">
-            <div class="title" style="font-size: 50px"> OLÁ!!! <img src="assets/imgs/emoji/hello-smiley.gif" style="width: 80px"></div>
-            Não sei exatamente o que escrever aqui, então vou falar um pouco sobre mim mesmo! <img src="assets/imgs/emoji/hihihi.png" style="width: 28px"><br>
-            Sou um pequeno criador de conteúdo brasileiro de Splatoon e jogador competitivo novato. Comecei a jogar em 14/05/2024 e logo me apaixonei pelo jogo!<br>
-            Produzo vídeos para a internet desde 2018, mas tive público de verdade pela primeira vez em 2025 graças a Splatoon.
-          </div>
-          <div class="columnMiddle" style="font-size: 20px;">
-            <div class="title" style="font-size: 50px">Suki:</div>
-            <div style=" display: flex; flex-direction: row;">
-              <div style="padding-right: 12px;">Nascida e foi adotada por nós em 2020. No começo, não era fã da ideia de ter um gato, mas com o tempo acabei me apegando
-                a ela. Hoje é minha melhor amiga, minha filha. Está comigo nos melhores e piores momentos e me enche o saco pedindo por petisco (até quando não tem).</div>
-              <img src="assets/imgs/suki.png" style="width: 35%; height: fit-content; border-radius: 15px;"> 
-            </div> 
-          </div>
-          <div class="columnMiddle" style="font-size: 20px;">
-            <div class="title" style="font-size: 50px">Avatar:</div>
-            <div style=" display: flex; flex-direction: row; justify-content: center;">
-              <img src="assets/imgs/heythatsme/stamper.png" class="heythatsme">
-              <img src="assets/imgs/heythatsme/wiper.png" class="heythatsme">
-              <img src="assets/imgs/heythatsme/zap.png" class="heythatsme">
-              <img src="assets/imgs/heythatsme/zf.png" class="heythatsme">
+          <div class="middleOrder">
+            <div class="columnMiddle" style="font-size: 20px;">
+              <div class="title" style="font-size: 50px">Avatar:</div>
+              <div style="display: flex; flex-direction: row; justify-content: center;">
+                <img src="assets/imgs/heythatsme/stamper.webp" class="heythatsme">
+                <img src="assets/imgs/heythatsme/wiper.webp" class="heythatsme">
+                <img src="assets/imgs/heythatsme/zap.webp" class="heythatsme">
+                <img src="assets/imgs/heythatsme/zf.webp" class="heythatsme">
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="sideOrder">
-          <div class="columnSide">
-            <div class="title">Socials:</div>
-            <div class=socialGrid>
-              <a href="https://www.youtube.com/channel/UCAbjQFqcIqxR8lZDTKNepMQ" class="socialList"><img src="assets/imgs/icons/youtube.png" style="margin-bottom: -3px; width: 17px"> YouTube</a>
-              <a href="https://www.tiktok.com/@andrei_p127" class="socialList"><img src="assets/imgs/icons/tiktok.png" style="margin-bottom: -3px; width: 17px"> TikTok</a>
-              <a href="https://www.instagram.com/sat.suki127" class="socialList"><img src="assets/imgs/icons/instagram.png" style="margin-bottom: -3px; width: 17px"> Instagram (Suki)</a>
-              <a href="https://steamcommunity.com/id/Andrei_P127" class="socialList"><img src="assets/imgs/icons/steam.png" style="margin-bottom: -3px; width: 17px"> Steam</a>
-              <a href="https://www.sendou.ink/u/andrei_p127" class="socialList"><img src="assets/imgs/icons/sendouink.png" style="margin-bottom: -4px; width: 14px"> Sendou.ink</a>
-              <a onClick="wipWarning()" class="socialList"><img src="assets/imgs/icons/discord.png" style="margin-bottom: -3px; width: 17px"> Discord</a>
-            </div>
-          </div>
-          <div class="columnSide">
-            <div class="title">Me apoie:</div>
-            <a href="https://livepix.gg/andreip127"> <img class="qrcode" src="assets/imgs/livepix.png" style="width: 240px"> </a>
-            <div style="font-size: 10px; text-align: right; padding-right: 17px;">Preciso dar alimento à Suki...</div>
-          </div>
-          <div class="columnSide">
-            <div class="title">PC Specs:</div>
-            <ul class="consoleList">
-              <li>Windows 11 Home x64</li>
-              <li>Gigabyte GeForce RTX 2060</li>
-              <li>Intel Core i5 10400F</li>
-              <li>Kingston Fury 32 GB RAM</li>
-              <li>230 GB SSD + 2 TB HDD</li>
-              <li>Gigabyte B460M DS3H V2</li>
-            </ul>
-            <div class="title">Setup:</div>
+          <div class="sideOrder">
+            <div class="columnSide">
+              <div class="title">Meus Consoles:</div>
               <ul class="consoleList">
-              <li>Redragon Mitra K551</li>
-              <li>Logitech G203</li>
-              <li>JBL Quantum 910</li>
-              <li>Fifine Ampligame A8</li>
-              <li>C3TECH SP-301BK</li>
-              <li>Samsung UHD UJ59 32"</li>
-              <li>Samsung SyncMaster TA550</li>
-            </ul>
+                <li>Nintendo Wii</li>
+                <li>Nintendo Wii U</li>
+                <li>Nintendo DSi XL</li>
+                <li>Nintendo 3DS</li>
+                <li>Nintendo Switch OLED</li>
+                <li>Nintendo Switch 2</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+
+      <div id="home" class="toggleablePage" style="display: block;">
+        <div id="homeOrder">
+          
+          <div class="sideOrder">
+            <div class="columnSide">
+              <div class="title">AnneTheOcto:</div>
+              <img src="assets/imgs/pfp.webp" style="width: 100%; border-radius: 15px;">
+              <div style="text-align: center">@Andrei_P127<br>
+                ela/dela (preferência)<br>
+                Estudante e Criadora de Conteúdo<br>
+                Wannabe Competitive Player<br>
+                Continuo não sendo uma fangirl.<br>
+              </div>
+            </div>
+            <div class="columnSide">
+              <div class="title">PC Specs:</div>
+              <ul class="consoleList">
+                <li>Windows 11 Home x64</li>
+                <li>Linux Ubuntu 25.10</li>
+                <li>Gigabyte GeForce RTX 2060</li>
+                <li>Intel Core i5 10400F</li>
+                <li>Kingston Fury 32 GB RAM</li>
+                <li>230 GB SSD + 6 TB HDD</li>
+                <li>Gigabyte B460M DS3H V2</li>
+              </ul>
+              <div class="title">Setup:</div>
+                <ul class="consoleList">
+                <li>Redragon Mitra K551</li>
+                <li>Logitech G203</li>
+                <li>JBL Quantum 910</li>
+                <li>Fifine Ampligame A8</li>
+                <li>C3TECH SP-301BK</li>
+                <li>Samsung UHD UJ59 32"</li>
+                <li>Samsung SyncMaster TA550</li>
+                <li>Samsung Galaxy Tab S6 Lite</li>
+                <li>Samsung Galaxy Z Flip6</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="middleOrder">
+            <div class="columnMiddle" style="font-size: 127%">
+              <div class="title" style="font-size: 230%"> OLÁ!!! <img src="assets/imgs/emoji/hello-smiley.gif" style="width: 80px"></div>
+              Não sei exatamente o que escrever aqui, então vou falar um pouco sobre mim mesma! <img src="assets/imgs/emoji/hihihi.webp" style="width: 28px"><br>
+              Sou uma pequena criadora de conteúdo brasileira de Splatoon e jogadora competitivo novata. Comecei a jogar em 14/05/2024 e logo me apaixonei pelo jogo!<br>
+              Produzo vídeos para a internet desde 2018, mas tive público de verdade pela primeira vez em 2025 graças a Splatoon.
+            </div>
+            <div class="columnMiddle" style="font-size: 127%;">
+              <div class="title" style="font-size: 230%">Suki:</div>
+              <div style=" display: flex; flex-direction: row;">
+                <div style="padding-right: 12px;">Nascida e adotada por nós em 2020. No começo, não era fã da ideia de ter um gato, mas com o tempo acabei me apegando
+                  a ela. Hoje é minha melhor amiga, minha filha. Está comigo nos melhores e piores momentos e me enche o saco pedindo por petisco (até quando não tem).</div>
+                <img src="assets/imgs/suki.webp" style="width: 167px; height: fit-content; border-radius: 15px;"> 
+              </div> 
+            </div>
+          </div>
+
+          <div class="sideOrder">
+            <div class="columnSide">
+              <div class="title">Socials:</div>
+              <div class=socialGrid>
+                <a href="https://www.youtube.com/channel/UCAbjQFqcIqxR8lZDTKNepMQ" class="socialList"><img src="assets/imgs/icons/youtube.webp" style="margin-bottom: -3px; width: 17px"> YouTube</a>
+                <a href="https://www.tiktok.com/@andrei_p127" class="socialList"><img src="assets/imgs/icons/tiktok.webp" style="margin-bottom: -3px; width: 17px"> TikTok</a>
+                <a href="https://www.instagram.com/sat.suki127" class="socialList"><img src="assets/imgs/icons/instagram.webp" style="margin-bottom: -3px; width: 17px"> Instagram (Suki)</a>
+                <a href="https://steamcommunity.com/id/Andrei_P127" class="socialList"><img src="assets/imgs/icons/steam.webp" style="margin-bottom: -3px; width: 17px"> Steam</a>
+                <a href="https://www.sendou.ink/u/andrei_p127" class="socialList"><img src="assets/imgs/icons/sendouink.webp" style="margin-bottom: -4px; width: 14px"> Sendou.ink</a>
+                <a onClick="wipWarning()" class="socialList"><img src="assets/imgs/icons/discord.webp" style="margin-bottom: -3px; width: 17px"> Discord</a>
+              </div>
+            </div>
+            <div class="columnSide">
+              <div class="title">Me apoie:</div>
+              <a href="https://livepix.gg/andreip127"> <img class="qrcode" src="assets/imgs/livepix.webp"> </a>
+              <div style="font-size: 40%; text-align: right; padding-right: 17px;">Preciso dar alimento à Suki...</div>
+            </div>
+            <div class="columnSide" style="padding-top: 10px;">
+              <div class="title" style="line-height: 107%">Programas que Uso:</div>
+              <ul class="consoleList">
+                <li>OBS Studio</li>
+                <li>Adobe Premiere</li>
+                <li>Adobe After Effects</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>ibisPaint</li>
+                <li>Blender</li>
+                <li>Switch Toolbox</li>
+                <li>Flexlion Mod Menu</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ocs" class="toggleablePage" style="display: none;">
+        <div class="middleOrder" style="margin: 10px;">
+          <div class="columnCharacter" style="font-size: 20px">
+            <div class="title" style="font-size: 50px">Spicy Calamari:</div>
+            <div class="characterGrid">
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 1;">Drey:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 9%">Um simples inkling. Não muito inteligente ou atraente, mas é bastante habilidoso e tem um bom coração.</div>
+                        <img src="assets/imgs/ocs/Drey.webp" style="width: 50%; height: 50%; padding: 10px; padding-right: 0; padding-left: 3%;">
+                    </div>
+                </div>
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 1;">Anne:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 9%">Irmã adotiva de Drey. Inteligente, estudiosa e super amigável, mas agressiva quando se trata de defender seu irmão.</div>
+                        <img src="assets/imgs/ocs/Anne.webp" style="width: 42%; height: 42%; padding: 10px">
+                    </div>
+                </div>
+            </div>
+            <div class="characterGrid">
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 1px; padding-top: 22px;">Cherry:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 9%">Membra do time do Drey e seu interesse romântico. Apesar de aparentar ter uma personalidade fofa e alegre no público, possui uma fortíssima depressão e vários problemas na vida pessoal.</div>
+                        <img src="assets/imgs/ocs/Cherry.webp" style="width: 37%; height: 37%; padding: 10px; padding-right: 0; padding-left: 3%;">
+                    </div>
+                </div>
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 1px; padding-top: 22px;">Dylan:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 9%">Líder do time do Drey. Meio intimidador, mas amigável e expressivo quando pega intimidade.</div>
+                        <img src="assets/imgs/ocs/Dylan.webp" style="width: 42%; height: 42%; padding: 10px">
+                    </div>
+                </div>
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 12px; padding-top: 22px;">Alex:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 9%">Membra do time do Drey. Não demonstra muitas emoções, mas é bastante apegada aos amigos.</div>
+                        <img src="assets/imgs/ocs/Alex.webp" style="width: 42%; height: 42%; padding: 10px">
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="middleOrder" style="margin: 10px;">
+          <div class="columnCharacter" style="font-size: 20px">
+            <div class="title" style="font-size: 50px">Spicy Calamari 2:</div>
+            <div class="characterGrid">
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 1;">Lychee:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 9%">Filha de Drey e Cherry. Alegre, curiosa e valente, mas se põe muito em perigo.</div>
+                        <img src="assets/imgs/ocs/Lychee.webp" style="width: 40%; height: 40%; padding: 10px; padding-right: 0; padding-left: 3%;">
+                    </div>
+                </div>
+                <div class="characterBlock">
+                    <div class="title" style="line-height: 1;">桃死:</div>
+                    <div style=" display: flex; flex-direction: row; justify-content: center">
+                        <div style="text-align: left; padding-top: 12%; font-size: 250%">???</div>
+                        <img src="assets/imgs/ocs/Momoshi.webp" style="width: 42%; height: 42%; padding: 10px">
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <br>
     </main>
-    (WIP)
-    
+    (WIP) Funciona melhor em 1920x1080p <a href="https://github.com/AndreiP127/dreys-home">Hosted on Github Pages.</a>
     <script src="script.js"></script>
   </body>
 </html>
